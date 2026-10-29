@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby "2.2.9"
+ruby ">= 2.2.9"
 
-gem 'rails', '~> 5.1.0'
+gem 'rails', '5.1.7'
 
-gem 'sass-rails', "~> 5.0.0"
+gem "sass-rails", "= 5.0.7"
 gem 'coffee-rails', "~> 4.2.0"
 
 gem 'uglifier', "~> 3.0.0"
@@ -52,7 +52,7 @@ gem 'mysql2', "~> 0.4", group: :mysql
 gem 'sqlite3', "~> 1.3", group: :sqlite
 
 # authentication
-gem 'devise', "~> 4.2"
+gem "devise", "~> 4.0"
 gem 'devise_ldap_authenticatable', "~> 0.8"
 
 # 2.7.0 appears to have regressions that are fixed in 2.7.1
@@ -108,7 +108,12 @@ gem 'react-rails', "~> 1.10"
 
 # Capistrano for deployment
 group :development do
-  gem 'capistrano', '~> 3.8'
+  gem 'capistrano', '~> 3.8', require: false
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
 end
+gem "execjs", "~> 2.8.0"
+gem "mimemagic", "= 0.3.9"
+gem "responders", "~> 2.0"
+gem "jquery-ui-rails", "~> 6.0"
+gem "loofah", "~> 2.2.3"

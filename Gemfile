@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.2.9"
+ruby ">= 2.2.9"
 
 gem 'rails', '~> 5.1.0'
 
@@ -108,7 +108,9 @@ gem 'react-rails', "~> 1.10"
 
 # Capistrano for deployment
 group :development do
-  gem 'capistrano', '~> 3.8'
+  gem 'capistrano', '~> 3.8', require: false
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
 end
+gem "execjs", "~> 2.8.0"
+gem "mimemagic", "= 0.3.9"

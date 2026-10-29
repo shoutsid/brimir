@@ -82,7 +82,7 @@ class TicketsControllerTest < ActionController::TestCase
 
   test 'should create ticket when posted from Mailgun' do
 
-    eval <<~END
+    eval <<-END
       class RestClient::Resource
         def initialize(url, user:, password:, headers:)
           fail "bad url" unless url == '#{@mailgun_message_url}'
